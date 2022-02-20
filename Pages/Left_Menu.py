@@ -30,9 +30,7 @@ class left_menu(base_page):
 
     def search_icon(self):
         self.driver.find_element(*self.icon_locator).click()
-
-    def sum(self,x,y):
-        return (x+y)     
+   
 
 
     
