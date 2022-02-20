@@ -12,6 +12,7 @@ class left_menu(base_page):
     search_locator=(By.XPATH,'//input[@class="gbqfif"]')
     icon_locator=(By.XPATH,'(//a[@href="/store/apps/details?id=com.ted.android"])[1]')
     
+    
     def __init__(self, driver):
         super().__init__(driver)
 
@@ -20,16 +21,18 @@ class left_menu(base_page):
 
     def click_categories(self):
         self.driver.find_element(*self.categories_locator).click()
+
+    def click_education(self):    
         self.driver.find_element(*self.Education_locator).click()
     
     def search_page(self,text):
         self.driver.find_element(*self.search_locator).send_keys(text + Keys.RETURN)
 
     def search_icon(self):
-        self.driver.find_element(*self.icon_locator).click()    
-   
+        self.driver.find_element(*self.icon_locator).click()
 
-        
+    def sum(self,x,y):
+        return (x+y)     
 
 
     
