@@ -12,11 +12,14 @@ class base_page:
         self.driver.get(URL) 
 
     def wait_element(self,*locator):
-        WebDriverWait(self.driver, 15).until(EC.presence_of_element_located(*locator))    
+        WebDriverWait(self.driver,10).until(EC.presence_of_element_located(*locator))    
 
     def get_current_url(self):
         return (self.driver.current_url)
 
+    def implicit_wait(self,amount_time:int):
+        self.driver.implicitly_wait(amount_time)
+            
     def get_title(self):
         return (self.driver.title)    
 

@@ -3,12 +3,6 @@ from Pages.Left_Menu import left_menu
 import pytest
 from selenium import webdriver
 
-@pytest.fixture
-def driver():
-    d=webdriver.Chrome()
-    d.implicitly_wait(10)
-    yield d
-    d.quit()
 
 def test_left_menu(driver):
     page=left_menu(driver)
@@ -23,7 +17,8 @@ def test_left_menu(driver):
     time.sleep(5)
     assert page.get_title() == 'Education - Android Apps on Google Play'
     page.search_page('TED')
-    page.search_icon()
+    page.wait_element(page.Ted_locator)
+    page.click_TED()
     time.sleep(5)
     assert page.get_title() == 'TED - Apps on Google Play'
     
