@@ -19,13 +19,13 @@ pip install pytest
 
 ## Running Tests locally
 ---------------------
-*To run the tests ,Navigate to the directory.
+* To run the tests ,Navigate to the directory.
 If you want to run all tests , you should enter this command:
 
 ```
 python -m pytest
 ```
-*If you want to run a specific class or test , you should enter this command:
+* If you want to run a specific class or test , you should enter this command:
 ```
 python -m pytest Tests\test_scenario_1.py
 ```
